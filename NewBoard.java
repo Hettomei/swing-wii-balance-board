@@ -20,16 +20,18 @@ public class NewBoard{
   }
 
   private BalanceBoard board = null ;
-  private Fenetre f;
+  private Fenetre fenetre;
 
   NewBoard(){
-    this.f = new Fenetre();
+    this.fenetre = new Fenetre();
   }
 
   public void connecter(){
+    fenetre.setVisible(true);
     while (board == null) {
       try {
         System.out.println("Recherche de board");
+        fenetre.displayNow("Recherche de board, appuyer sur le bouton");
         board = WiiRemoteJ.findBalanceBoard();//methode bloquante
         /*
           si on veut une board bien précise avec l'adresse mac, faire :
@@ -39,6 +41,7 @@ public class NewBoard{
       catch(Exception e) {
         board = null;
         System.out.println("Probleme de connection, reessayez");
+        fenetre.displayNow("Probleme de connection, reessayez");
       }
     }
 
@@ -46,7 +49,7 @@ public class NewBoard{
 
     try{
       board.setLEDIlluminated(true);
-      board.addBalanceBoardListener(new Listt(board, f));
+      board.addBalanceBoardListener(new Listt(board, fenetre));
     }
     catch(Exception e){
       e.printStackTrace();

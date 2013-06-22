@@ -16,4 +16,8 @@ public class Fenetre extends JFrame {
   public void setStr(String str){
     p.setStr(str);
   }
+  
+  public void displayNow(String other){
+    p.displayNow(other);
+  }
 }
