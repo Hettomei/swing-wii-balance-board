@@ -46,7 +46,7 @@ public class NewBoard{
 
     try{
       board.setLEDIlluminated(true);
-      board.addBalanceBoardListener(new Listt(board));
+      board.addBalanceBoardListener(new Listt(board, f));
     }
     catch(Exception e){
       e.printStackTrace();
