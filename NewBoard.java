@@ -31,24 +31,22 @@ public class NewBoard{
     while (board == null) {
       try {
         System.out.println("Recherche de board");
-        fenetre.displayNow("Recherche de board, appuyer sur le bouton");
-        board = WiiRemoteJ.findBalanceBoard();//methode bloquante
-        /*
-          si on veut une board bien précise avec l'adresse mac, faire :
-          board = WiiRemoteJ.connectToRemote ("0024F3957B2C") ;
-        */
+        fenetre.setInfos("Recherche de board, appuyez sur le bouton");
+        //board = WiiRemoteJ.findBalanceBoard();//methode bloquante, allow you to take the bluetooth ID
+        board = WiiRemoteJ.connectToBalanceBoard ("0024446AB360") ;
       }
       catch(Exception e) {
         board = null;
         System.out.println("Probleme de connection, reessayez");
-        fenetre.displayNow("Probleme de connection, reessayez");
+        fenetre.setInfos("Probleme de connection, reessayez");
       }
     }
 
-    System.out.println("Wii balance connectée ! @MAC: " + board.getBluetoothAddress());
+    System.out.println("Wii balance connectée ! @MAC: ");
+    System.out.println(board.getBluetoothAddress());
+    fenetre.setInfos("Board connectee.");
 
     try{
-      board.setLEDIlluminated(true);
       board.addBalanceBoardListener(new Listt(board, fenetre));
     }
     catch(Exception e){

@@ -12,7 +12,6 @@ public class Listt extends BalanceBoardAdapter{
   {
     this.board = board;
     this.fenetre = fenetre;
-    this.fenetre.setVisible(true);
     this.df = new DecimalFormat("#.00");
   }
 
@@ -20,7 +19,7 @@ public class Listt extends BalanceBoardAdapter{
   {
     double a = evt.getTotalMass();
 
-    fenetre.setStr("" + df.format(a) + " kg");
+    fenetre.setData("" + df.format(a) + " kg");
   }
 }
 

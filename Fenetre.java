@@ -6,18 +6,18 @@ public class Fenetre extends JFrame {
 
   public Fenetre(){
     this.setTitle("Pese personne Java");
-    this.setSize(500, 400);
+    this.setSize(600, 500);
     this.setLocationRelativeTo(null);
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     p = new Panneau();
     this.setContentPane(p);
   }
 
-  public void setStr(String str){
-    p.setStr(str);
+  public void setData(String str){
+    p.setData(str);
   }
-  
-  public void displayNow(String other){
-    p.displayNow(other);
+
+  public void setInfos(String other){
+    p.setInfos(other);
   }
 }
