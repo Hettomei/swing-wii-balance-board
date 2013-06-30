@@ -1,0 +1,3 @@
+# to have a well configured vim,
+# just type in bash :
+export CLASSPATH=".:./lib/*"
