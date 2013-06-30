@@ -12,6 +12,11 @@ How to run it ?
 
 $ java -d32 -cp .:./lib/* NewBoard
 
+Compile and run :
+If you are lazy and have the same configuration as this project simply
+type :
+$ ./compile-run.sh
+
 You need to have bluetooth activated and don't link the balance board
 with the computer before, the program do it.
 
