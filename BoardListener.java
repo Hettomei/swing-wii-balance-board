@@ -2,13 +2,13 @@ import wiiremotej.*;
 import wiiremotej.event.* ;
 import java.text.DecimalFormat;
 
-public class Listt extends BalanceBoardAdapter{
+public class BoardListener extends BalanceBoardAdapter{
 
   private BalanceBoard board;
   private Fenetre fenetre;
   private DecimalFormat df;
 
-  public Listt(BalanceBoard board, Fenetre fenetre)
+  public BoardListener(BalanceBoard board, Fenetre fenetre)
   {
     this.board = board;
     this.fenetre = fenetre;

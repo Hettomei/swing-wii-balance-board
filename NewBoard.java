@@ -47,7 +47,7 @@ public class NewBoard{
     fenetre.setInfos("Board connectee.");
 
     try{
-      board.addBalanceBoardListener(new Listt(board, fenetre));
+      board.addBalanceBoardListener(new BoardListener(board, fenetre));
     }
     catch(Exception e){
       e.printStackTrace();
