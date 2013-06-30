@@ -48,6 +48,7 @@ public class NewBoard{
 
     try{
       board.addBalanceBoardListener(new BoardListener(board, fenetre));
+      board.requestStatus();
     }
     catch(Exception e){
       e.printStackTrace();

@@ -17,7 +17,15 @@ public class Fenetre extends JFrame {
     p.setData(str);
   }
 
+  public void setData2(String str){
+    p.setData2(str);
+  }
+
   public void setInfos(String other){
     p.setInfos(other);
+  }
+
+  public void setBattery(double status){
+    p.setBattery(status);
   }
 }
