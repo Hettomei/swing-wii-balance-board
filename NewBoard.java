@@ -3,12 +3,11 @@ import java.net.*;
 import wiiremotej.*;
 import wiiremotej.event.* ;
 import java.io.*;
-import java.util.Date;//pour limiter le nombre de commande par milliseconde
 
 public class NewBoard{
 
   public static void main (String[] args){
-    //initialisation du bluetooth
+    //init bluetooth
     System.setProperty (BlueCoveConfigProperties.PROPERTY_JSR_82_PSM_MINIMUM_OFF, "true") ;
 
     WiiRemoteJ.setConsoleLoggingAll();
